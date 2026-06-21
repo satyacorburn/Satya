@@ -76,13 +76,25 @@ nav a:hover { color: var(--accent); }
 
 .hero-inner { max-width: 680px; }
 
+.hero-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-heading-text { text-align: right; }
+
+.hero-heading-text .hero-eyebrow,
+.hero-heading-text h1 { margin-bottom: 0; }
+
 .hero-photo {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 1.5rem;
-  display: block;
+  flex-shrink: 0;
   border: 3px solid var(--accent-lt);
   box-shadow: var(--shadow);
 }
@@ -380,4 +392,6 @@ footer {
   .row-card { flex-direction: column; }
   .card-right { align-self: flex-start; }
   .section { padding: 3.5rem 1.2rem; }
+  .hero-heading { flex-direction: column-reverse; }
+  .hero-heading-text { text-align: center; }
 }
