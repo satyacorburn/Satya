@@ -316,36 +316,19 @@ nav a:hover { color: var(--accent); }
 }
 
 /* ── Skills ── */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.skill-item {
+.skill-categories {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: .9rem 1.2rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.skill-name {
-  font-size: .88rem;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.skill-level {
-  font-size: .72rem;
+.skill-category h4 {
+  font-size: .75rem;
   font-weight: 600;
-  color: var(--accent);
-  background: var(--accent-lt);
-  padding: .2rem .6rem;
-  border-radius: 99px;
-  letter-spacing: .03em;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: .75rem;
 }
 
 /* ── Contact ── */
