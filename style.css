@@ -104,6 +104,13 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 
 .hero-tags { justify-content: flex-start; }
 
+.hero-tagline {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin: .5rem 0 1rem;
+}
+
 .hero-sub { margin: 0 0 2rem; }
 
 .hero-photo {
