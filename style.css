@@ -36,7 +36,18 @@ nav {
   background: rgba(250,250,248,.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+  transition: background .3s ease, border-color .3s ease;
 }
+
+nav.scrolled {
+  background: #2f3a2d;
+  border-bottom: 1px solid #2f3a2d;
+}
+
+nav.scrolled .nav-name,
+nav.scrolled a { color: #fafaf8; }
+
+nav.scrolled a:hover { color: #cfe0c9; }
 
 .nav-name {
   font-family: 'Playfair Display', serif;

@@ -260,5 +260,12 @@
     <p>© 2026 Satya Corburn</p>
   </footer>
 
+  <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+
 </body>
 </html>
