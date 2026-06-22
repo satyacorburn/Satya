@@ -167,6 +167,12 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
   letter-spacing: .02em;
 }
 
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .btn {
   display: inline-block;
   background: var(--accent);
@@ -179,6 +185,14 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
   letter-spacing: .04em;
   transition: background .2s, transform .15s;
 }
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+
+.btn-outline:hover { background: var(--accent-lt); transform: translateY(-1px); }
 
 .btn:hover { background: #4a5748; transform: translateY(-1px); }
 
