@@ -379,9 +379,9 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .skill-category { flex: 1; }
 
 .skill-category h4 {
-  font-size: .75rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: .75rem;
