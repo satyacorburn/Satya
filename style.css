@@ -65,31 +65,6 @@ nav ul {
   justify-self: center;
 }
 
-.nav-contact {
-  grid-column: 3;
-  justify-self: end;
-  text-decoration: none;
-  font-size: .85rem;
-  font-weight: 700;
-  color: var(--accent);
-  background: var(--accent-lt);
-  border: 1.5px solid var(--accent);
-  padding: .35rem 1.1rem;
-  border-radius: 99px;
-  letter-spacing: .02em;
-  transition: background .2s, color .2s;
-}
-
-.nav-contact:hover { background: var(--accent); color: #fff; }
-
-nav.scrolled .nav-contact {
-  background: transparent;
-  color: #fafaf8;
-  border-color: #fafaf8;
-}
-
-nav.scrolled .nav-contact:hover { background: #fafaf8; color: #2f3a2d; }
-
 nav a {
   text-decoration: none;
   font-size: .9rem;
