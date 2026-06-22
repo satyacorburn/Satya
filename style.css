@@ -245,6 +245,7 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 #contact     { background: #e5ebe0; }
 
 .container { max-width: 820px; margin: 0 auto; }
+.container-wide { max-width: 1100px; }
 
 .about-grid {
   display: flex;
@@ -315,7 +316,11 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
   box-shadow: var(--shadow);
 }
 
-.cards { display: flex; flex-direction: column; gap: 1.25rem; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
 
 .row-card {
   display: flex;
@@ -544,4 +549,5 @@ footer {
   .hero-inner { flex-direction: column-reverse; text-align: center; }
   .hero-tags { justify-content: center; }
   .skill-categories { flex-direction: column; }
+  .cards { grid-template-columns: 1fr; }
 }
