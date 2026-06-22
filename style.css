@@ -21,7 +21,11 @@ body {
   line-height: 1.7;
   color: var(--text);
   background: var(--bg);
+  overflow-x: hidden;
+  width: 100%;
 }
+
+img { max-width: 100%; }
 
 /* ── Nav ── */
 nav {
