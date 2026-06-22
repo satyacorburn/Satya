@@ -186,6 +186,12 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .section { padding: 5rem 2rem; }
 .section.alt { background: var(--bg-alt); }
 
+#education   { background: #eef2ea; }
+#projects    { background: #e5ebe0; }
+#experience  { background: #dbe4d4; }
+#skills      { background: #eef2ea; }
+#contact     { background: #e5ebe0; }
+
 .container { max-width: 820px; margin: 0 auto; }
 
 .section-title {
@@ -360,6 +366,11 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: .75rem;
+}
+
+.skill-category .inline-list {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* ── Contact ── */
