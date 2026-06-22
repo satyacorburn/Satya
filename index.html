@@ -111,13 +111,16 @@
               <p class="meta">Tulane University · Fall 2025</p>
             </div>
           </div>
-          <ul>
-            <li>Collaborated with a team to develop a comprehensive public relations plan for YEP, a New Orleans-based nonprofit dedicated to youth development and community empowerment.</li>
-            <li>Crafted a targeted media pitch and promotional strategy to drive attendance at a community luncheon fundraising event, tailoring messaging to resonate with local donors and stakeholders.</li>
-            <li>Researched audience demographics and communication channels to identify the most effective outreach strategies for maximizing community engagement.</li>
-            <li>Developed key messaging frameworks and PR materials including press pitches and event promotional content aligned with YEP's organizational mission.</li>
-            <li>Applied classroom PR principles to a real nonprofit client, gaining hands-on experience in strategic communication planning and campaign execution.</li>
-          </ul>
+          <div class="card-content">
+            <ul>
+              <li>Collaborated with a team to develop a comprehensive public relations plan for YEP, a New Orleans-based nonprofit dedicated to youth development and community empowerment.</li>
+              <li>Crafted a targeted media pitch and promotional strategy to drive attendance at a community luncheon fundraising event, tailoring messaging to resonate with local donors and stakeholders.</li>
+              <li>Researched audience demographics and communication channels to identify the most effective outreach strategies for maximizing community engagement.</li>
+              <li>Developed key messaging frameworks and PR materials including press pitches and event promotional content aligned with YEP's organizational mission.</li>
+              <li>Applied classroom PR principles to a real nonprofit client, gaining hands-on experience in strategic communication planning and campaign execution.</li>
+            </ul>
+          </div>
+          <button class="view-more-btn">View More</button>
         </div>
 
         <div class="card project-card">
@@ -128,13 +131,16 @@
               <p class="meta">Tulane University · Spring 2026</p>
             </div>
           </div>
-          <ul>
-            <li>Researched and wrote a long-form investigative journalism report examining how Hurricane Katrina catalyzed the transformation of New Orleans' public school system into a predominantly charter school model.</li>
-            <li>Conducted original interviews with community members, educators, and stakeholders to gather firsthand perspectives on the lasting social and educational impacts of post-Katrina reform.</li>
-            <li>Utilized archival newspaper sources and primary documents to trace historical coverage and construct a detailed timeline of systemic change in local education policy.</li>
-            <li>Synthesized qualitative interview data with archival research to produce a nuanced, evidence-based narrative on education equity and institutional reform.</li>
-            <li>Demonstrated core investigative journalism skills including source development, fact verification, and long-form narrative writing.</li>
-          </ul>
+          <div class="card-content">
+            <ul>
+              <li>Researched and wrote a long-form investigative journalism report examining how Hurricane Katrina catalyzed the transformation of New Orleans' public school system into a predominantly charter school model.</li>
+              <li>Conducted original interviews with community members, educators, and stakeholders to gather firsthand perspectives on the lasting social and educational impacts of post-Katrina reform.</li>
+              <li>Utilized archival newspaper sources and primary documents to trace historical coverage and construct a detailed timeline of systemic change in local education policy.</li>
+              <li>Synthesized qualitative interview data with archival research to produce a nuanced, evidence-based narrative on education equity and institutional reform.</li>
+              <li>Demonstrated core investigative journalism skills including source development, fact verification, and long-form narrative writing.</li>
+            </ul>
+          </div>
+          <button class="view-more-btn">View More</button>
         </div>
 
         <div class="card project-card">
@@ -144,12 +150,15 @@
               <h3>Consumer Insights Campaign</h3>
             </div>
           </div>
-          <ul>
-            <li>Designed a mock marketing campaign for a sustainable skincare brand.</li>
-            <li>Conducted audience research and created customer personas.</li>
-            <li>Developed a campaign strategy, content calendar, budget, and performance goals.</li>
-            <li>Presented recommendations through a visually designed pitch deck.</li>
-          </ul>
+          <div class="card-content">
+            <ul>
+              <li>Designed a mock marketing campaign for a sustainable skincare brand.</li>
+              <li>Conducted audience research and created customer personas.</li>
+              <li>Developed a campaign strategy, content calendar, budget, and performance goals.</li>
+              <li>Presented recommendations through a visually designed pitch deck.</li>
+            </ul>
+          </div>
+          <button class="view-more-btn">View More</button>
         </div>
 
         <div class="card project-card">
@@ -159,11 +168,14 @@
               <h3>Social Media Analytics Project</h3>
             </div>
           </div>
-          <ul>
-            <li>Evaluated engagement patterns across Instagram, TikTok, and YouTube.</li>
-            <li>Used spreadsheet analysis to compare reach, engagement rate, and audience growth.</li>
-            <li>Converted findings into charts and strategic recommendations for future content.</li>
-          </ul>
+          <div class="card-content">
+            <ul>
+              <li>Evaluated engagement patterns across Instagram, TikTok, and YouTube.</li>
+              <li>Used spreadsheet analysis to compare reach, engagement rate, and audience growth.</li>
+              <li>Converted findings into charts and strategic recommendations for future content.</li>
+            </ul>
+          </div>
+          <button class="view-more-btn">View More</button>
         </div>
 
       </div>
@@ -268,6 +280,17 @@
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    document.querySelectorAll('.view-more-btn').forEach(btn => {
+      const content = btn.previousElementSibling;
+      if (content.scrollHeight > content.clientHeight) {
+        btn.style.display = 'inline-block';
+      }
+      btn.addEventListener('click', () => {
+        const expanded = content.classList.toggle('expanded');
+        btn.textContent = expanded ? 'View Less' : 'View More';
+      });
     });
   </script>
 
