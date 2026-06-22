@@ -540,16 +540,47 @@ footer {
 }
 
 /* ── Responsive ── */
-@media (max-width: 600px) {
-  nav { padding: 0 1.2rem; }
-  nav ul { gap: 1rem; }
+@media (max-width: 900px) {
+  .cards { grid-template-columns: 1fr; }
+  .hero-photo { width: 220px; height: 220px; }
+}
+
+@media (max-width: 700px) {
+  nav {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    height: auto;
+    padding: .85rem 1.2rem;
+    row-gap: .6rem;
+  }
+  .nav-name { grid-column: 1; grid-row: 1; }
+  .nav-contact { grid-column: 2; grid-row: 1; }
+  nav ul {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .9rem 1.4rem;
+  }
   .row-card { flex-direction: column; }
   .card-right { align-self: flex-start; }
   .section { padding: 3.5rem 1.2rem; }
-  .hero-inner { flex-direction: column-reverse; text-align: center; }
+  .hero { padding: 3.5rem 1.2rem; min-height: auto; }
+  .hero-inner { flex-direction: column-reverse; text-align: center; gap: 1.5rem; }
+  .hero-text { max-width: 100%; }
   .hero-tags { justify-content: center; }
+  .hero-btns { justify-content: center; }
+  .hero-photo { width: 180px; height: 180px; }
+  .about-big { font-size: 2.1rem; }
   .skill-categories { flex-direction: column; }
-  .cards { grid-template-columns: 1fr; }
+  .skill-category { padding: 1.25rem; }
+  .contact-links { gap: 1rem; }
+}
+
+@media (max-width: 420px) {
+  .hero-photo { width: 140px; height: 140px; }
+  .about-big { font-size: 1.7rem; }
+  .section-title { font-size: 1.7rem; }
 }
 
 /* ── Scroll Reveal ── */
