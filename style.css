@@ -152,8 +152,8 @@ nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .hero-sub { margin: 0 0 2rem; }
 
 .hero-photo {
-  width: 280px;
-  height: 280px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
