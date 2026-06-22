@@ -551,3 +551,15 @@ footer {
   .skill-categories { flex-direction: column; }
   .cards { grid-template-columns: 1fr; }
 }
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
