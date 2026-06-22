@@ -15,13 +15,19 @@
 
   <nav>
     <span class="nav-name">Satya Corburn</span>
-    <ul>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="https://www.linkedin.com/in/satya-corburn-808b81297" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li class="nav-contact-mobile"><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-contact">Contact</a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
   <!-- Hero -->
@@ -280,6 +286,21 @@
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
     });
 
     document.querySelectorAll('.view-more-btn').forEach(btn => {
